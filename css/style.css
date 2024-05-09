@@ -1,0 +1,992 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap");
+
+:root {
+  --color-primario: hsl(205, 90%, 68%);
+  --color-secundario: hsl(343, 85%, 81%);
+  --color-terciario: #eff5f5;
+  --color-texto: #181823;
+  --color-fondo: hsl(205, 97%, 58%);
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: var(--color-fondo);
+}
+
+body{
+  display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* MENU*/
+
+.nav__responsive-ul {
+  display: none;
+}
+
+nav {
+  background-color: var(--color-primario);
+  box-shadow: 0 3px 5px 1px rgb(114, 114, 114);
+}
+
+.nav__li {
+  display: inline-block;
+  padding: 12px;
+  color: var(--color-terciario);
+  font-size: 1rem;
+}
+
+.nav__li:hover > a {
+  color: #005777;
+}
+.nav__li:hover {
+  color: #005777;
+}
+
+.nav__li a {
+  color: var(--color-terciario);
+  text-decoration: none;
+  font-size: 1rem;
+  font-family:"Poppins", sans-serif ;
+}
+.nav__li i {
+  box-sizing: border-box;
+  text-align: left;
+  margin-right: 5px;
+}
+
+#body .nav_responsive-button-container {
+  position: fixed;
+  width: 100vw;
+  font-size: 1rem;
+  background-color: var(--color-primario);
+  top: 0px;
+  z-index: 100;
+}
+
+.nav_responsive-button-container {
+  display: none; /* Ocultar el botón de menú en pantallas grandes */
+  position: fixed;
+  width: 100%;
+  font-size: 20px;
+  background-color: var(--color-primario);
+  top: 0px;
+  z-index: 100;
+}
+
+.nav_responsive-button {
+  padding: 6px 2px;
+  margin-top: 3px;
+  text-align: center;
+  width: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav_responsive-button i {
+  font-size: 1.5rem;
+  color: var(--color-terciario);
+}
+
+/*Main*/
+
+.section_container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  width: 90%; 
+  margin: 0 auto;
+}
+
+.main_container {
+  display: flex;
+  width:100vw ;
+  height: 60vh;
+  background:
+    linear-gradient(rgba(57, 200, 252, 0.463), rgba(252, 170, 207, 0.458)),
+    url(../portada-1.jpg) no-repeat center center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: scrollBackground 20s infinite linear;
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.main__title {
+  color: var(--color-terciario);
+  font-family: "Belanosima", "Poppins";
+  text-align: center;
+  text-shadow: 3px 3px 5px var(--color-texto);
+  font-size: 4rem !important;
+  transform: translateY(-100%);
+  animation: fadeInTitle 1s forwards;
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+main h2 {
+  color: var(--color-terciario);
+  font-family: "Belanosima", "Poppins";
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 5px var(--color-texto);
+  transform: translatex(-100%);
+  animation: fadeInh2 1s forwards;
+}
+
+@keyframes fadeInh2 {
+  0% {
+    opacity: 0;
+    transform: translatex(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+p{
+  font-family: "Poppins";
+  font-size: 1rem;
+  color:var(--color-terciario);
+}
+
+/* Aside*/
+.aside {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-secundario);
+  background-size: auto;
+  grid-row: span 4;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  width: 90%;
+  margin: 0 auto;
+  height:fit-content;
+}
+
+
+.aside_image{
+  width: 90%;
+  margin: 1px;
+  padding: 10px;
+}
+
+h3, h5{
+  color: var(--color-terciario);
+  margin: 1rem 0.3rem 0 2rem;
+  font-family: "Belanosima","Poppins";
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px var(--color-texto);
+}
+
+/* Seccion inicio*/
+#inicio.aside.p {
+  background: var(--color-secundario);
+  padding: 0.2rem 0.1rem 0.1rem 0.1rem;
+}
+
+/* Alineación de los elementos principales y la barra lateral */
+.main_container,
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ajuste del tamaño de los elementos principales */
+.main_container {
+  width: 100%; /* O ajusta según sea necesario */
+}
+
+.aside {
+  width: 90%; /* Ajusta según sea necesario */
+}
+
+
+.main__section_inicio_container {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secundario);
+}
+
+main section h3 {
+  color: var(--color-terciario);
+  margin: 1rem 0.3rem 0 2rem;
+  font-family: "Belanosima","Poppins";
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px var(--color-texto);
+}
+
+.inicio_image {
+  margin: 1rem;
+  width: 60%;
+  height: 60%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px var(--color-texto);
+}
+
+main section div img:hover {
+  transition: 1s;
+  transform: scale(1.05);
+  filter: grayscale(100%);
+  transition: 0.5s;
+  box-shadow: 7px 7px 7px rgb(104, 103, 103);
+  cursor: pointer;
+}
+
+main section p {
+  margin: 0.5rem;
+  padding: 0 0.3rem;
+  display: inline;
+  font-family: "Poppins";
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+/* Sección oferta*/
+#oferta {
+  background-color: var(--color-primario);
+  padding: 0.2rem 0.1rem 0.1rem 0.1rem;
+  margin: 2rem;
+}
+
+.main__oferta_p {
+  color: var(--color-terciario);
+  font-size: 1.5rem;
+}
+
+.oferta_h3{
+  color: /*#005777*/#eff5f5;
+  animation: changeColorh3 15s infinite;
+}
+
+.oferta_container {
+  display: flex;
+  align-items: center;
+}
+
+.oferta_image {
+  margin: 1rem;
+  width: 60%;
+  height: 60%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px var(--color-texto);
+}
+
+
+/* Sección Propuesta Terapéutica */
+#propuesta-terapeutica{
+ justify-content: center;
+   margin-left: 20%;
+  }
+
+.propuesta-terapeutica{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.main__section_propuesta-terapeutica {
+ background-color: var(--color-secundario);
+  /*padding: 0.3rem 0.3rem 0.3rem 0.3rem;*/
+  width:100% ;
+  margin-left: 7rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  box-shadow: 3px 3px 5px var(--color-texto);
+}
+
+.propuesta-terapeutica_h3 {
+  color: #eff5f5;
+  animation: changeColorh3 15s infinite;
+}
+
+@keyframes changeColorh3 {
+  0% { color: var(--color-terciario); } 
+  50% { color: var(--color-secundario)} 
+  100% { color: var(--color-terciario); } 
+}
+
+h5 {
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.propuesta-terapeutica-container {
+  display: grid;
+ /*display:flex;*/
+  width: 100%;
+  height: fit-content;
+  gap: 0.1rem;
+ /* margin: 2rem 0.1rem 0.5rem 0.1rem;*/
+  padding-bottom: 5rem;
+  grid-template-rows: repeat(2, 45%);
+  grid-template-columns: repeat(3, 45%);
+  justify-content: center;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  align-items: start;
+  align-content: space-between;
+  border-radius: 10px;
+}
+
+.propuesta-terapeutica-container .item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.propuesta-terapeutica-container .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(122, 122, 122);
+}
+
+.propuesta-terapeutica-container .item:hover img {
+  transition: 2s;
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+.propuesta-terapeutica-container figcaption {
+  position: absolute;
+  top: 50px;
+  align-self: center;
+  font-size: 1rem;
+  color: white;
+  opacity: 0;
+  scale: 0;
+}
+
+.propuesta-terapeutica-container .item:hover figcaption {
+  opacity: 1;
+  scale: 100%;
+  transition: 1s;
+  color: var(--color-terciario);
+  font-family: "Belanosima", Courier, monospace;
+  font-size: 2.5rem;
+}
+
+.propuesta-terapeutica-container .item .img2 {
+  width: 60%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(122, 122, 122);
+}
+
+/*Curiosidades*/
+
+#sabias {
+  justify-content: center;
+  margin-left: 20%;
+}
+
+.sabias_container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+h4 {
+  font-family: "Belanosima", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.section_sabias_article {
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-secundario);
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px var(--color-texto);
+}
+
+.sabias_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(122, 122, 122);
+}
+
+/* footer */
+
+footer {
+  animation: changeColor 15s infinite;
+}
+
+@keyframes changeColor {
+  0% { background-color: var(--color-primario); }
+  50% { background-color: #49ffb6}
+  100% { background-color: var(--color-primario); }
+}
+
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer h5 {
+  font-family: "Belanosima", "Poppins";
+  color: var(--color-fondo);
+  font-size: 1rem;
+}
+
+.footer_redes,
+.footer_location,
+.footer_contacto {
+  border: solid 3px var(--color-terciario);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fa.fa {
+  font-size: 2.5em;
+}
+
+footer div div a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+footer ol {
+  margin: 0;
+  text-align: left;
+  padding-left: 0;
+}
+
+footer li {
+  display: block;
+  list-style-type: none;
+}
+
+footer li:hover {
+  scale: 120%;
+  animation: rotate 1s
+}
+
+.footer_location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer_location_link {
+  display: inline-block;
+  margin: 1rem;
+  box-shadow: 1px 5px 5px #181823;
+}
+
+.footer_mapa {
+  width: 50%;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.menuflot {
+  position: fixed;
+  bottom: 50vh;
+  background-color: rgb(255, 255, 255);
+  bottom: 180px;
+  left: 95vw;
+  width: 10%;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 10px;
+  opacity: 0.4;
+}
+
+.menuflot:hover {
+  transition: 1s;
+  left: 90vw;
+  opacity: 1;
+}
+
+.menuflot .sobre {
+  width: 80%;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 50vh;
+  opacity: 0.6;
+  right: 0;
+  bottom: 40px;
+  width: 40px;
+  animation: rotate 5s infinite;
+  animation-delay: 55s;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#flecha {
+  position: fixed;
+  left: 0;
+  bottom: 50vh;
+  width: 40px;
+  animation: move 5s infinite;
+  animation-delay: 55s;
+}
+
+@keyframes move {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+}
+
+footer div div ol li a i {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-terciario);
+}
+
+/* Página formulario*/
+/*#formulario {
+  margin: 50px auto;
+  width: 70%;
+  color: var(--color-primario);
+  font-family: "Belanosima","Poppins",sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 3px var(--color-texto);
+}
+
+
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #1f8a70;
+  border: 0.1rem solid #1f8a70;
+}
+textarea {
+  color: #1f8a70;
+}
+
+textarea:focus {
+  color: #eff5f5;
+}
+textarea::placeholder {
+  color: #1f8a70;
+}
+
+input {
+  color: #1f8a6f;
+}
+input::placeholder {
+  color: #1f8a70;
+}
+
+input:focus {
+  color: #eff5f5;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: red;
+}*/
+
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(120deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos comunes para todas las pantallas */
+/*.main__title {
+  font-size: 8rem;
+  top: 35%;
+}
+
+main h2 {
+  font-size: 3rem;
+  top: 65%;
+}*/
+
+/* Estilos específicos para pantallas de hasta 1200px */
+@media (max-width: 1200px) {
+  .main__title {
+    font-size: 1rem;
+    top: 50%;
+  }
+  .propuesta-terapeutica-container .item:hover figcaption {
+    font-size: 1.8rem;
+  }
+}
+
+/* Estilos específicos para pantallas de hasta 768px */
+@media (max-width: 768px) {
+  .nav__ul {
+    display: none;
+  }
+  .nav__responsive-ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 37px;
+    padding-top: 27px;
+    height: 37px;
+    list-style: none;
+  }
+  .nav__li-container {
+    position: fixed;
+    top: -1000px;
+    height: calc(100vh - 64px);
+    /*background: rgba(255, 149, 63, 0.93);*/
+    transition: all 1s;
+    z-index: 1;
+    width: 75%;
+    padding-top: 27px;
+    border-radius: 10px;
+  }
+  .nav__responsive-li {
+    width: 100%;
+    padding: 9px 10px;
+  }
+  .nav__responsive-li i {
+    box-sizing: border-box;
+    margin-right: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--color-terciario);
+  }
+  .nav__responsive-li a {
+    color: var(--color-terciario);
+    text-decoration: none;
+    font-size: 0.5rem;
+  }
+  .nav__responsive-ul:hover > .nav__li-container {
+    top: -27px;
+  }
+  .main__title {
+    font-size: 2.5rem;
+    top: 50%;
+  }
+  .propuesta-terapeutica-container {
+    align-items: end;
+    grid-template-rows: repeat(1, 25%);
+    grid-template-columns: repeat(1, 90%);
+  }
+  main h2 {
+    font-size: 1.2rem;
+    top: 60%;
+  }
+  main section div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inicio_image,
+  .oferta_image {
+    width: 90%;
+  }
+  main section h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  header nav ul {
+    display: block;
+  }
+  main section div img {
+    width: 90%;
+    height: 90%;
+  }
+  .section_container {
+    display: grid;
+    grid-template-columns: 90%;
+  }
+  .aside {
+    display: none;
+  }
+  .propuesta-terapeutica-container .item:hover figcaption {
+    font-size: 1.5em;
+  }
+}
+
+/* Estilos específicos para pantallas de hasta 320px */
+@media (max-width: 320px) {
+  .main__title {
+    font-size: 1.2rem;
+    top: 40%;
+  }
+  main h2 {
+    top: 45%;
+    font-size: 1rem;
+  }
+  main section h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  main section div img {
+    width: 100%;
+    height: 100%;
+  }
+  .propuesta-terapeutica-container .item:hover figcaption {
+    font-size: 1.7rem;
+  }
+  .footer_container {
+    flex-direction: column;
+  }
+  footer li {
+    display: inline;
+  }
+}
+
+
+/* Estilos para dispositivos móviles (celulares y tablets) */
+
+/*@media only screen and (max-width: 767px) {
+  /* Estilos específicos para dispositivos móviles */
+
+
+/* Estilos para tablets */
+
+/*@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Estilos específicos para tablets */
+
+
+/* Estilos para notebooks */
+
+/*@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* Estilos específicos para notebooks */
+
+
+/* Estilos para PC */
+
+/*@media only screen and (min-width: 1280px) {
+  /* Estilos específicos para PC */
+
+
+
+
+/* media query*/
+/*@media (max-width: 1800px) {
+  .main__title {
+    font-size: 8rem;
+    top: 35%;
+  }
+  main h2 {
+    font-size: 3rem;
+    top: 65%;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+
+}
+
+@media (max-width: 1200px) {
+  .main__title {
+    font-size: 6rem;
+    top: 50%;
+  }
+  main h2 {
+    font-size: 2.5rem;
+    top: 70%;
+  }
+
+
+  .propuesta-terapeutica-container .item:hover figcaption {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav__ul {
+    display: none;
+  }
+  .nav__responsive-ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 37px;
+    padding-top: 27px;
+    height: 37px;
+    list-style: none;
+  }
+  .nav__li-container {
+    position: fixed;
+    top: -1000px;
+    height: calc(100vh -64px);
+    background: rgba(255, 149, 63, 0.93);
+    transition: all 1s;
+    z-index: 1;
+    width: 75%;
+    padding-top: 27px;
+    border-radius: 10px;
+  }
+  .nav__responsive-li {
+    width: 100%;
+    padding: 9px 10px;
+  }
+  .nav__responsive-li i {
+    box-sizing: border-box;
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--color-terciario);
+  }
+  .nav__responsive-li a {
+    color: var(--color-terciario);
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .nav__responsive-ul:hover > .nav__li-container {
+    top: -27px;
+  }
+
+  .main__title {
+    font-size: 2.9rem;
+    top: 50%;
+  }
+  .propuesta-terapeutica-container {
+    align-items: end;
+    grid-template-rows: repeat(1, 25%);
+    grid-template-columns: repeat(1, 90%);
+  }
+  main h2 {
+    font-size: 1.2rem;
+    top: 60%;
+  }
+  main section div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inicio_image {
+    width: 95%;
+  }
+
+  .oferta_image {
+    width: 95%;
+  }
+
+  main section h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  header nav ul {
+    display: block;
+  }
+  main section div img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section_container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .aside {
+    display: none;
+  }
+  .propuesta-terapeutica-container .item:hover figcaption {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .main__title {
+    font-size: 1.5rem;
+    top: 40%;
+  }
+  .section_container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  main h2 {
+    top: 45%;
+    font-size: 1rem;
+  }
+  header nav ul {
+    display: block;
+  }
+  .oferta_image {
+    width: 95%;
+  }
+  .oferta_image {
+    width: 95%;
+  }
+
+  main section div {
+    flex-direction: column;
+    align-items: center;
+  }
+  main section h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  main section div img {
+    width: 100%;
+    height: 100%;
+  }
+  .propuesta-terapeutica-container .item:hover figcaption {
+    font-size: 1.7rem;
+  }
+  .footer_container {
+    flex-direction: column;
+  }
+  footer li {
+    display: inline;
+   }
+
+}
