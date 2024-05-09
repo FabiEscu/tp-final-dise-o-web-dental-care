@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap");
+
+:root {
+  --color-primario: hsl(205, 90%, 68%);
+  --color-secundario: hsl(343, 85%, 81%);
+  --color-terciario: #eff5f5;
+  --color-texto: #181823;
+  --color-fondo: hsl(205, 97%, 58%);
+}
+
+body {
+    margin-top: 3rem;
+    background-color: var(--color-primario);
+   /* linear-gradient(rgba(57, 200, 252, 0.463), rgba(252, 170, 207, 0.458));*/
+ /*background:var(--color-primario);*/*/
+  font-family:"Poppins", sans-serif;
+}
+
+.inicio {
+    display: flex;
+    width: 0.3%;
+    position: fixed;
+  }
+  
+  .inicio :hover {
+    color:var(--color-secundario);
+  
+    transform: scale(120%);
+    transition-duration: 0.25s;
+  }
+
+form {
+  width: 480px;
+  margin: auto;
+  background: var(--color-secundario);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  border-radius: 6%;
+  box-shadow: #181823 3px 3px 2px ;
+}
+
+h4 {
+  color: #eff5f5;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  font-family: "Belanosima", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 1.5em;
+  text-shadow: #181823 3px 3px 2px;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 1.5em;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: medium;
+  border:solid var(--color-secundario) 2px;
+  box-shadow: var(--color-texto) 2px 2px 2px ;
+  color: var(--color-texto);
+}
+
+
+textarea {
+  min-height: 100px;
+  max-height: 100px;
+  max-width: 100%;
+}
+
+button {
+   background-color: var(--color-fondo);
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 400;
+  color:var(--color-terciario);
+  border:solid  2px;
+  box-shadow: var(--color-texto) 2px 2px 2px ;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media (max-width:480px) {
+  form {
+    width: 100%;
+  }
+}
