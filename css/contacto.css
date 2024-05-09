@@ -13,8 +13,9 @@ body {
     margin-top: 3rem;
     background-color: var(--color-primario);
    /* linear-gradient(rgba(57, 200, 252, 0.463), rgba(252, 170, 207, 0.458));*/
- /*background:var(--color-primario);*/*/
-  font-family:"Poppins", sans-serif;
+ /*background:var(--color-primario);*/
+ font-family: "Poppins","sans serif";
+
 }
 
 .inicio {
