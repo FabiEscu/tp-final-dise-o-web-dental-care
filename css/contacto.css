@@ -11,10 +11,10 @@
 
 body {
     margin-top: 3rem;
-    background:
-    linear-gradient(rgba(57, 200, 252, 0.463), rgba(252, 170, 207, 0.458));
- /*background:var(--color-primario);*/
-  font-family: "Poppins", sans-serif;
+    background-color: var(--color-primario);
+   /* linear-gradient(rgba(57, 200, 252, 0.463), rgba(252, 170, 207, 0.458));*/
+ /*background:var(--color-primario);*/*/
+  font-family:"Poppins", sans-serif;
 }
 
 .inicio {
@@ -33,7 +33,7 @@ body {
 form {
   width: 480px;
   margin: auto;
-  background: rgba(236, 167, 221, 0.5);
+  background: var(--color-secundario);
   padding: 10px 20px;
   box-sizing: border-box;
   margin-top: 30px;
@@ -73,7 +73,7 @@ textarea {
 }
 
 button {
-   background-color: #0fb7f988;
+   background-color: var(--color-fondo);
   padding: 20px;
   font-family: "Poppins", sans-serif;
   font-size: 400;
